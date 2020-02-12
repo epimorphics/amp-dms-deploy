@@ -1,123 +1,158 @@
 {
-  "OwnerId": "828737851284",
-  "ReservationId": "r-6c5deb8b",
   "Groups": [],
   "Instances": [
     {
+      "AmiLaunchIndex": 0,
+      "ImageId": "ami-cda130ba",
+      "InstanceId": "i-01ea5cdd851b123ea",
+      "InstanceType": "m3.medium",
+      "KernelId": "aki-52a34525",
+      "KeyName": "ec2-expt-general",
+      "LaunchTime": "2020-02-10T14:46:55.000Z",
       "Monitoring": {
         "State": "disabled"
       },
-      "PublicDnsName": "ec2-52-16-138-169.eu-west-1.compute.amazonaws.com",
-      "RootDeviceType": "ebs",
+      "Placement": {
+        "AvailabilityZone": "eu-west-1c",
+        "GroupName": "",
+        "Tenancy": "default"
+      },
+      "PrivateDnsName": "ip-10-0-1-166.eu-west-1.compute.internal",
+      "PrivateIpAddress": "10.0.1.166",
+      "ProductCodes": [],
+      "PublicDnsName": "ec2-54-217-251-145.eu-west-1.compute.amazonaws.com",
+      "PublicIpAddress": "54.217.251.145",
       "State": {
         "Code": 16,
         "Name": "running"
       },
-      "EbsOptimized": false,
-      "LaunchTime": "2015-04-21T08:32:53.000Z",
-      "PublicIpAddress": "52.16.138.169",
-      "PrivateIpAddress": "10.0.1.155",
-      "ProductCodes": [],
-      "VpcId": "vpc-69fa510c",
-      "StateTransitionReason": null,
-      "InstanceId": "i-687c5e8f",
-      "ImageId": "ami-cda130ba",
-      "PrivateDnsName": "ip-10-0-1-155.eu-west-1.compute.internal",
-      "KeyName": "nrw",
-      "SecurityGroups": [
-        {
-          "GroupName": "dms-control",
-          "GroupId": "sg-eea5f38b"
-        }
-      ],
-      "ClientToken": null,
-      "SubnetId": "subnet-5db9352a",
-      "InstanceType": "m3.large",
-      "NetworkInterfaces": [
-        {
-          "Status": "in-use",
-          "SourceDestCheck": true,
-          "VpcId": "vpc-69fa510c",
-          "Description": null,
-          "Association": {
-            "PublicIp": "52.16.138.169",
-            "PublicDnsName": "ec2-52-16-138-169.eu-west-1.compute.amazonaws.com",
-            "IpOwnerId": "828737851284"
-          },
-          "NetworkInterfaceId": "eni-68b1d01e",
-          "PrivateIpAddresses": [
-            {
-              "PrivateDnsName": "ip-10-0-1-155.eu-west-1.compute.internal",
-              "Association": {
-                "PublicIp": "52.16.138.169",
-                "PublicDnsName": "ec2-52-16-138-169.eu-west-1.compute.amazonaws.com",
-                "IpOwnerId": "828737851284"
-              },
-              "Primary": true,
-              "PrivateIpAddress": "10.0.1.155"
-            }
-          ],
-          "PrivateDnsName": "ip-10-0-1-155.eu-west-1.compute.internal",
-          "Attachment": {
-            "Status": "attached",
-            "DeviceIndex": 0,
-            "DeleteOnTermination": true,
-            "AttachmentId": "eni-attach-d09b3a90",
-            "AttachTime": "2015-04-21T08:32:53.000Z"
-          },
-          "Groups": [
-            {
-              "GroupName": "dms-control",
-              "GroupId": "sg-eea5f38b"
-            }
-          ],
-          "SubnetId": "subnet-5db9352a",
-          "OwnerId": "828737851284",
-          "PrivateIpAddress": "10.0.1.155"
-        }
-      ],
-      "SourceDestCheck": true,
-      "Placement": {
-        "Tenancy": "default",
-        "GroupName": null,
-        "AvailabilityZone": "eu-west-1c"
-      },
-      "Hypervisor": "xen",
+      "StateTransitionReason": "",
+      "SubnetId": "subnet-09a6c7b6c628d0806",
+      "VpcId": "vpc-0bf3912ea52355570",
+      "Architecture": "x86_64",
       "BlockDeviceMappings": [
         {
           "DeviceName": "/dev/sda1",
           "Ebs": {
-            "Status": "attached",
+            "AttachTime": "2020-02-07T16:40:16.000Z",
             "DeleteOnTermination": true,
-            "VolumeId": "vol-5e0ade4d",
-            "AttachTime": "2015-04-21T08:32:56.000Z"
+            "Status": "attached",
+            "VolumeId": "vol-0e3927b4bbc5bb18c"
           }
         },
         {
           "DeviceName": "/dev/sdf",
           "Ebs": {
-            "Status": "attached",
+            "AttachTime": "2020-02-07T16:40:16.000Z",
             "DeleteOnTermination": false,
-            "VolumeId": "vol-720ade61",
-            "AttachTime": "2015-04-21T08:32:56.000Z"
+            "Status": "attached",
+            "VolumeId": "vol-04edb15e843cf810d"
           }
         }
       ],
-      "Architecture": "x86_64",
-      "KernelId": "aki-52a34525",
+      "ClientToken": "",
+      "EbsOptimized": false,
+      "Hypervisor": "xen",
       "IamInstanceProfile": {
-        "Id": "AIPAIRSK5JXHJBQWJ6PAU",
-        "Arn": "arn:aws:iam::828737851284:instance-profile/dms-automation"
+        "Arn": "arn:aws:iam::293385631482:instance-profile/amp-dms-automantion",
+        "Id": "AIPAUITZFO35FRAAJMOXC"
       },
-      "RootDeviceName": "/dev/sda1",
-      "VirtualizationType": "paravirtual",
-      "Tags": [
+      "NetworkInterfaces": [
         {
-          "Value": "dms-controller",
-          "Key": "Name"
+          "Association": {
+            "IpOwnerId": "293385631482",
+            "PublicDnsName": "ec2-54-217-251-145.eu-west-1.compute.amazonaws.com",
+            "PublicIp": "54.217.251.145"
+          },
+          "Attachment": {
+            "AttachTime": "2020-02-07T16:40:14.000Z",
+            "AttachmentId": "eni-attach-010092f91010d1722",
+            "DeleteOnTermination": true,
+            "DeviceIndex": 0,
+            "Status": "attached"
+          },
+          "Description": "",
+          "Groups": [
+            {
+              "GroupName": "amp-dms-control",
+              "GroupId": "sg-020099061cf2f891c"
+            }
+          ],
+          "Ipv6Addresses": [],
+          "MacAddress": "02:15:e8:2d:03:ea",
+          "NetworkInterfaceId": "eni-0732e011fdc23c3a2",
+          "OwnerId": "293385631482",
+          "PrivateDnsName": "ip-10-0-1-166.eu-west-1.compute.internal",
+          "PrivateIpAddress": "10.0.1.166",
+          "PrivateIpAddresses": [
+            {
+              "Association": {
+                "IpOwnerId": "293385631482",
+                "PublicDnsName": "ec2-54-217-251-145.eu-west-1.compute.amazonaws.com",
+                "PublicIp": "54.217.251.145"
+              },
+              "Primary": true,
+              "PrivateDnsName": "ip-10-0-1-166.eu-west-1.compute.internal",
+              "PrivateIpAddress": "10.0.1.166"
+            }
+          ],
+          "SourceDestCheck": true,
+          "Status": "in-use",
+          "SubnetId": "subnet-09a6c7b6c628d0806",
+          "VpcId": "vpc-0bf3912ea52355570"
+        },
+        {
+          "Attachment": {
+            "AttachTime": "2020-02-10T15:20:46.000Z",
+            "AttachmentId": "eni-attach-080895a6b5308d69c",
+            "DeleteOnTermination": false,
+            "DeviceIndex": 1,
+            "Status": "attached"
+          },
+          "Description": "Second Interface",
+          "Groups": [
+            {
+              "GroupName": "amp-dms-control",
+              "GroupId": "sg-020099061cf2f891c"
+            }
+          ],
+          "Ipv6Addresses": [],
+          "MacAddress": "02:c1:78:44:41:72",
+          "NetworkInterfaceId": "eni-07de91b86a9f4379f",
+          "OwnerId": "293385631482",
+          "PrivateDnsName": "ip-10-0-1-8.eu-west-1.compute.internal",
+          "PrivateIpAddress": "10.0.1.8",
+          "PrivateIpAddresses": [
+            {
+              "Primary": true,
+              "PrivateDnsName": "ip-10-0-1-8.eu-west-1.compute.internal",
+              "PrivateIpAddress": "10.0.1.8"
+            }
+          ],
+          "SourceDestCheck": true,
+          "Status": "in-use",
+          "SubnetId": "subnet-09a6c7b6c628d0806",
+          "VpcId": "vpc-0bf3912ea52355570"
         }
       ],
-      "AmiLaunchIndex": 0
+      "RootDeviceName": "/dev/sda1",
+      "RootDeviceType": "ebs",
+      "SecurityGroups": [
+        {
+          "GroupName": "amp-dms-control",
+          "GroupId": "sg-020099061cf2f891c"
+        }
+      ],
+      "SourceDestCheck": true,
+      "Tags": [
+        {
+          "Key": "Name",
+          "Value": "amp-dms-controller"
+        }
+      ],
+      "VirtualizationType": "paravirtual"
     }
-  ]
+  ],
+  "OwnerId": "293385631482",
+  "ReservationId": "r-0f8127ae78946a4f5"
 }

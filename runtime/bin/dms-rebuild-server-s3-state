@@ -10,5 +10,5 @@ for i in \
     services/*/publicationSets/*/tiers/*/aws-lb.json \
     services/*/publicationSets/*/tiers/*/lb-name 
 do 
-    aws s3 cp $i s3://nrw-dms-deploy/dms-state/$i
+    aws s3 cp $i s3://amp-dms-deploy/dms-state/$i
 done

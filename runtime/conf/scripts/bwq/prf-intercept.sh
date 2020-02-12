@@ -18,7 +18,7 @@ if grep -qi prediction_text_en $file ; then
   if grep -sq 40050 $file ; then
     echo "Forwarding forecast for Cemaes"
     CEMAES_PRF=$( grep 40050 $file | sed -e 's/,0,/,Unknown risk,/' -e 's/,1,/,Normal risk,/' -e 's/,2,/,Increased risk,/' -e 's/,/, /g' )
-    CEMAES_SNS_TOPIC=arn:aws:sns:eu-west-1:828737851284:cemaes-prf
+    CEMAES_SNS_TOPIC=arn:aws:sns:eu-west-1:293385631482:cemaes-prf
     aws sns publish --topic-arn $CEMAES_SNS_TOPIC --region=eu-west-1 --subject "Cemaes forecast" --message "EA Forecast for Cemaes: $CEMAES_PRF"
   fi
 

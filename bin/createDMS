@@ -14,7 +14,7 @@ mkdir -p $serverDir
 
 AWS_EBS=50
 AWS_INSTANCE_STORE=yes
-AWS_INSTANCE_TYPE=m3.large
+AWS_INSTANCE_TYPE=m3.medium
 AWS_AMI=$AMI_UBUNTU_EBS
 AWS_SG=$SG_CONTROL
 CHEF_ROLE=dms_controller
@@ -36,5 +36,5 @@ AttachENI $serverDir $MONITOR_NET_IF
 
 InstallChefSolo "$serverDir" chef
 IP=$(jq -r ".Instances[0].PublicDnsName" < $inst_file)
-cd chef
-knife solo cook ubuntu@$IP ../$serverDir/node.json --identity-file $AWS_KEY --yes --no-color
+cd chef/dms-controller
+knife solo cook ubuntu@$IP ../../$serverDir/node.json --identity-file $AWS_KEY --yes --no-color

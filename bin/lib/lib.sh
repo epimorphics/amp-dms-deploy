@@ -135,7 +135,7 @@ AllocateServer() {
         --image-id "$AWS_AMI" \
         --instance-type "$AWS_INSTANCE_TYPE" \
         --security-group-ids $AWS_SG \
-        --key-name "$PREFIX" \
+        --key-name "ec2-expt-general" \
         --associate-public-ip-address \
         --subnet-id "$VPC" \
         $iamRole \
@@ -204,7 +204,7 @@ InstallChefSolo() {
 
     IP=$(jq -r ".Instances[0].PublicDnsName" < $serverDir/aws-instance.json)
     echo "Installing chef solo to $IP"
-    knife solo prepare "ubuntu@$IP" -N "$FULL_NAME" --identity-file $AWS_KEY --yes  --no-color
+    knife solo prepare "ubuntu@$IP" -N "$FULL_NAME" --identity-file $AWS_KEY --yes  --no-color --bootstrap_version=11.14..6
     mv nodes/$FULL_NAME.json $serverDir/node-orig.json
 
 	# Set up node file to correspond to a single top level role

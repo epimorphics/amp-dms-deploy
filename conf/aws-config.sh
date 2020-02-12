@@ -1,21 +1,21 @@
 # AWS Configuration information
 
 # VPC configuration
-readonly SG_BACK_END=sg-b6a5f3d3            # security group for dms-backend
-readonly SG_FRONT_END=sg-61a2f404           # security group for dms-frontend
-readonly SG_CONTROL=sg-eea5f38b             # security group for dms-control
+readonly SG_BACK_END=sg-0e6801a7d0c920a1d            # security group for dms-backend
+readonly SG_FRONT_END=sg-041a5d445577dfd3c           # security group for dms-frontend
+readonly SG_CONTROL=sg-020099061cf2f891c             # security group for dms-control
 
-readonly VPC_PUBLIC_B=subnet-4bf99d2e       # public subnet for DMS VPC
-readonly VPC_PUBLIC_C=subnet-5db9352a       # public subnet for DMS VPC
+readonly VPC_PUBLIC_B=subnet-0873e7c64222fbe9b       # public subnet for DMS VPC
+readonly VPC_PUBLIC_C=subnet-09a6c7b6c628d0806       # public subnet for DMS VPC
 readonly VPC_PUBLIC=( $VPC_PUBLIC_B $VPC_PUBLIC_C )
 
 # Interfaces
-readonly ELASTIC_IP="52.16.138.169"
+readonly ELASTIC_IP="54.217.251.145"
 readonly ELASTIC_IP_ALLOC="eipalloc-57aa5232"
 readonly MONITOR_NET_IF="eni-76e98f00"
 
 # The automation instance role
-readonly AWS_DMS_ROLE="arn:aws:iam::828737851284:instance-profile/dms-automation"
+readonly AWS_DMS_ROLE="arn:aws:iam::293385631482:instance-profile/amp-dms-automantion"
 
 # Location where the configuration state should be preserved
 readonly S3_BUCKET="s3://{prefix}-dms-deploy"
