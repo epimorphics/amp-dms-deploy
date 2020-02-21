@@ -23,9 +23,9 @@ node.override['dms_controller']['grafana_dashboards'] = ['dms']
 
 # Baseline data and media
 node.override['dms_controller']['baseline']['nrwbwq']['testing_baseline_images']    = [ 'wales-baseline-2014-10-31.tgz', 'wales-baseline-2014-10-31.nq.gz' ]
-node.override['dms_controller']['baseline']['nrwbwq']['testing_web_snapshot']       = 'wales-web-media-2014-10-27.tgz'
+node.override['dms_controller']['baseline']['nrwbwq']['testing_web_snapshot']       = 'wales-web-media-2014-10-27.tar'
 node.override['dms_controller']['baseline']['nrwbwq']['production_baseline_images']    = [ 'wales-baseline-2014-10-31.tgz', 'wales-baseline-2014-10-31.nq.gz' ]
-node.override['dms_controller']['baseline']['nrwbwq']['production_web_snapshot']       = 'wales-web-media-2014-10-27.tgz'
+node.override['dms_controller']['baseline']['nrwbwq']['production_web_snapshot']       = 'wales-web-media-2014-10-27.tar'
 
 # Support for pubutil (AS out of hours)
 node.override['dms_controller']['pubutil_war_base']  = 'http://repository.epimorphics.com/com/epimorphics/pubutil-nrw/1.0.0/'
