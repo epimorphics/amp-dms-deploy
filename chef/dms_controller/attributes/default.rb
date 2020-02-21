@@ -10,7 +10,7 @@ node.override['dms_controller']['server_name']    = "#{pre}-controller.epimorphi
 node.override['dms_controller']['use_https']      = true
 
 # The git repository containing the service configuration, scripts and UI templates
-node.override['dms_controller']['conf_repo']     = "https://github.com/epimorphics/#{pre}-dms-deploy.git"
+node.override['dms_controller']['conf_repo']     = "git@github.com:epimorphics/amp-dms-deploy.git"
 node.override['dms_controller']['conf_repo_is_private'] = true
 
 # Space separated list of names of elastic load balancers that should be monitored 
@@ -41,3 +41,7 @@ node.override['epi_deploy']['pubutil']['group']      = 'tomcat7'
 override['epi_java']['packages']            = [ 'openjdk-8-jre-headless' ]
 override['epi_java']['java_home']           = '/usr/lib/jvm/java-8-openjdk-amd64'
 override['epi_java']['default_alternative'] = "#{node['epi_java']['java_home']}/jre/bin/java"  
+
+# ruby 2.4
+node.override['epi_ruby']['package']        = 'ruby2.4'
+node.override['epi_ruby']['dev_package']    = 'ruby2.4-dev'
